@@ -1,3 +1,5 @@
+
+
 let PLAYER_SCORE = 0;
 let COMPUTER_SCORE = 0;
 
@@ -10,17 +12,17 @@ function getComputerChoice(){
 }
 
 function getPlayerChoice(){
-    let playerprompt = prompt("Enter your choice: ");
-    let playerchoice = playerprompt.toLowerCase();
-    console.log("Player:",playerchoice);
-    return playerchoice;
+    const buttons = document.querySelectorAll("button"); //NodeList
+    console.log(buttons);
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            return (button.id);
+        });
+    })
 }
 
 function playRound(computer, player){
-    if(player != "rock" && player != "scissors" && player != "paper"){
-    console.log("INVALID INPUT");
-    }
-    else if(computer === player){
+    if(computer === player){
         console.log("Its a tie");
         return 0;
     }
@@ -50,34 +52,8 @@ function playRound(computer, player){
     }
 }
 
-function updateScore(winner){
-    if(winner == 1){
-        COMPUTER_SCORE++;
-    }
-    else if(winner == 2){
-        PLAYER_SCORE++;
-    }
-}
-
-function playGame(){
-    for(let i = 1; i <= 5 ;i++){
-        //get the choices
-        computer = getComputerChoice();
-        player = getPlayerChoice();
-        let result = playRound(computer,player)
-        updateScore(result);
-    }
-    console.log("PLAYER SCORE:",PLAYER_SCORE);
-    console.log("COMPUTER SCORE:", COMPUTER_SCORE);
-    if(PLAYER_SCORE > COMPUTER_SCORE){
-        console.log("You won. But I'll get you next time.");
-    }
-    else if(PLAYER_SCORE < COMPUTER_SCORE){
-        console.log("HAHAH! I wonnnnnn! Youu losst");
-    }
-    else if(PLAYER_SCORE == COMPUTER_SCORE){
-        console.log("We are equals");
-    }
-}
-
-playGame();
+computer = getComputerChoice();
+console.log(computer);
+player = getPlayerChoice();
+console.log("hi",player);
+playRound(computer, player);
