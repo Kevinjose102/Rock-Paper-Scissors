@@ -5,23 +5,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="./styles.css">
         <script defer src="./script.js"></script>
     </head>
 
     <body>
-        <div class="header">
-            ROCK PAPER SCISSORS
+        <div class="intro">
+            <div class="header">
+                ROCK PAPER SCISSORS
+            </div>
+            <p class="rules">
+                A rock beats scissors, 
+                scissors beat paper by cutting it,<br> 
+                and paper beats rock by covering it.<br>
+                There will be five rounds. The one with most points
+                wins.<br>
+                <strong>CHOOSE YOUR WEAPON</strong>
+            </p>
         </div>
-        <p class="rules">
-            TODOOOO
-        </p>
-
-        <button id="rock">ROCK</button>
-        <button id="paper">PAPER</button>
-        <button id="scissors">SCISSOR</button>
+        <div class="scores">
+            <div class="heading">SCORES</div>
+            <div class="points">
+                <div class="player">
+                    <div>PLAYER</div>
+                    <div class="player-score">0</div>
+                </div>
+                <div class="computer">
+                    <div>COMPUTER</div>
+                    <div class="computer-score">0</div>
+                </div>
+            </div>
+        </div>
 
         <p id="round-result"></p>
-        <div class="player-score">0</div>
-        <div class="computer-score">0</div>
+
+        <div class="selections">
+            <div class="playerSelection">?</div>
+            <div class="computerSelection">?</div>
+        </div>
+
+        <div class="playerButtons">
+            <button id="rock">✊</button> 
+            <button id="paper">✋</button>
+            <button id="scissors">✌</button>
+        </div>
     </body>
+
+    <footer>
+
+    </footer>
 </html>

@@ -1,0 +1,65 @@
+html{
+    height: 100vh;
+}
+body{
+    height: 800px;
+    background-color: #222831;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.header
+{   
+    width: 100vw;
+    background-color: #111720;
+    margin: 0;
+    padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.rules{
+    width: 100vw;
+    background-color: #111720;
+    margin: 0;
+    padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.scores{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    color: white;
+    align-items: center;
+    width: 100vw;
+}
+
+.points{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.player, .computer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#round-result{
+    color: white;
+}
