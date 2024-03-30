@@ -1,3 +1,3 @@
 ROCK PAPER SCISSORS GAME
-live preview:
+#live preview:
 https://kevinjose102.github.io/Rock-Paper-Scissors/
