@@ -7,7 +7,11 @@ const computerScore = document.querySelector(".computer-score");
 const body = document.querySelector("body");
 const playerSelection = document.querySelector(".playerSelection");
 const computerSelection = document.querySelector(".computerSelection");
+const footer = document.querySelector("footer")
+const resetButton = document.querySelector(".reset");
 
+result.setAttribute("style", "font-family: monospace; font-size: 25px; color: rgb(255, 157, 0)");
+resetButton.disabled = true;
 let PLAYER_SCORE = 0;
 let COMPUTER_SCORE = 0;
 let ROUND_COUNT = 0;
@@ -46,28 +50,31 @@ function playGame(player){
     }
     else{
       //its a tie
-      result.textContent = "it was a draw";
+      PLAYER_SCORE++;
+      COMPUTER_SCORE++;
+      playerScore.textContent = PLAYER_SCORE;
+      computerScore.textContent = COMPUTER_SCORE;
+      result.textContent = "It's a draw.";
     }
   }
   else if(ROUND_COUNT == 5){ 
+    result.setAttribute("style", "font-family: monospace; font-size: 27px; font-weight: bold; color: rgb(255, 157, 0)");
     if(PLAYER_SCORE > COMPUTER_SCORE){
-      console.log("YOU WIN");
+      result.textContent = "YOU WIN"
     }
     else if(COMPUTER_SCORE > PLAYER_SCORE){
-      console.log("YOU LOSSSSE");
+      result.textContent = "YOU LOSE"
     }
     else{
-      console.log("ITS A TIE");
+      result.textContent = "IT WAS A TIE"
     }
 
-    const resetButton = document.createElement("button");
-    resetButton.classList.add("reset");
-    resetButton.textContent = "RESET";
-    //TODO STYLES
-    body.appendChild(resetButton);
+    buttonPaper.disabled = true;
+    buttonRock.disabled = true;
+    buttonScissors.disabled = true;
+
+    resetButton.disabled = false;
     resetButton.addEventListener("click", () => {
-      result.textContent = "";
-      body.removeChild(resetButton);
       reset();
     });
   }
@@ -81,9 +88,9 @@ function playRound (computer, player){
         (player == "paper" && computer == "rock") ||
         (player == "scissors" && computer == "paper")
       ) {
-        return `you Won! ${player} beats ${computer}`;
+        return `You Won! ${player} beats ${computer}`;
       } else {
-        return `you Lose! ${computer} beats ${player}`;
+        return `You Lose! ${computer} beats ${player}`;
       }
 }
 
@@ -95,7 +102,15 @@ function reset(){
   ROUND_COUNT = 0;
   playerSelection.textContent = "?";
   computerSelection.textContent = "?"
-}
+
+  buttonPaper.disabled = false;
+  buttonRock.disabled = false;
+  buttonScissors.disabled = false;
+
+  resetButton.disabled = true;
+
+  result.textContent = "";
+} 
 
 buttonRock.addEventListener("click", () => {
   ROUND_COUNT++;

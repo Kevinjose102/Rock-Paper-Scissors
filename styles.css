@@ -2,13 +2,14 @@ html{
     height: 100vh;
 }
 body{
-    height: 800px;
+    height: 100vh;
     background-color: #222831;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -17,12 +18,16 @@ body{
     width: 100vw;
     background-color: #111720;
     margin: 0;
-    padding: 20px;
+    padding: 25px;
+    padding-top: 30px;
     padding-left: 0;
     padding-right: 0;
     text-align: center;
     color: white;
-    font-size: 50px;
+    font-size: 40px;
+    font-family: "Press Start 2P";
+    font-weight: bolder;
+    color: rgb(255, 157, 0);
 }
 
 .rules{
@@ -35,23 +40,31 @@ body{
     text-align: center;
     color: white;
     font-size: 20px;
+    font-family: monospace;
 }
-
+.heading{
+    font-size: 35px;
+    color: rgb(255, 157, 0);
+    text-decoration: underline;
+}
 .scores{
     display: flex;
     flex-direction: column;
-    font-size: 25px;
-    color: white;
+    font-size: 27px;
+    color: rgb(255, 157, 0);
     align-items: center;
     width: 100vw;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: monospace;
+    font-weight: bold;
 }
-
 .points{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 100px;
 }
 .player, .computer{
     display: flex;
@@ -61,5 +74,80 @@ body{
 }
 
 #round-result{
+    color: white;
+    padding: 5px;
+    margin: 0;
+}
+
+.selections{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    color: white;
+    font-size: 110px;
+    padding: 10px;
+}
+
+.playerButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.playerButtons button{
+    font-size: 120px;
+    background-color: #38414e7c;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid #38414e7c;
+    transition: background-color 0.06s, border 0.2s, box-shadow 0.2s;
+}
+
+.playerButtons button:hover
+{
+    cursor: pointer;
+    background-color: rgba(79, 84, 95, 0.646);
+    border: 2px solid rgb(199, 133, 12);
+    box-shadow: 1px 1px 10px rgb(172, 172, 172);
+}
+
+.playerButtons button:active{
+    background-color: rgba(109, 114, 123, 0.646);
+}
+
+.reset{
+    font-size: 23px;
+    padding: 15px;
+    background-color: #4752616d;
+    color: white;
+    border: 2px solid #4752616d;
+    border-radius: 10px;
+    margin: 10px;
+    transition: border 0.2s, background-color 0.2s;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.reset:hover{
+    background-color: rgba(79, 84, 95, 0.646);
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(110, 110, 110, 0.662);
+    border: 2px solid rgba(255, 255, 255, 0.358);
+}
+
+footer{
+    color: white;
+    font-family: monospace;
+    background-color: #111720;
+    width: 100vw;
+    padding: 0;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 23px;
+}
+
+a{
     color: white;
 }

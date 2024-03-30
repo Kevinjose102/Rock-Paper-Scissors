@@ -7,6 +7,12 @@
         <title>Rock Paper Scissors</title>
         <link rel="stylesheet" href="./styles.css">
         <script defer src="./script.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
     </head>
 
     <body>
@@ -15,11 +21,13 @@
                 ROCK PAPER SCISSORS
             </div>
             <p class="rules">
+                ----------------------- RULES -----------------------<br>
                 A rock beats scissors, 
                 scissors beat paper by cutting it,<br> 
                 and paper beats rock by covering it.<br>
                 There will be five rounds. The one with most points
                 wins.<br>
+                ---------------------------------------------<br>
                 <strong>CHOOSE YOUR WEAPON</strong>
             </p>
         </div>
@@ -37,21 +45,27 @@
             </div>
         </div>
 
-        <p id="round-result"></p>
-
         <div class="selections">
             <div class="playerSelection">?</div>
             <div class="computerSelection">?</div>
         </div>
+
+        <p id="round-result"></p>
 
         <div class="playerButtons">
             <button id="rock">✊</button> 
             <button id="paper">✋</button>
             <button id="scissors">✌</button>
         </div>
+
+        <button class="reset">
+            RESET
+        </button>
+        <footer>
+            <a target="_blank" href="https://github.com/Kevinjose102">Copyright © 2024 Kevinjose102</a>
+        </footer>
+        
     </body>
 
-    <footer>
 
-    </footer>
 </html>
